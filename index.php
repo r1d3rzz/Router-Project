@@ -1,13 +1,9 @@
 <?php
-    try {
-        $pdo=new PDO("mysql:host=localhost;dbname=todo","admin","123456");
-    } catch (PDOException $th) {
-        echo $th->getMessage();
-    }
+    require "function.php";
+    
+    $pdo=dbCollection();
 
-    $statement=$pdo->prepare("select * from tasks");
-    $statement->execute();
-    $tasks=$statement->fetchAll(PDO::FETCH_OBJ);
+    $tasks=fetchTask($pdo);
 
     require "index.view.php";
 ?>
