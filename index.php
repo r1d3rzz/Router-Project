@@ -1,10 +1,11 @@
 <?php
     require "function.php";
     require "Connection.php";
-    
-    $pdo=Connection::make();
+    require "QuaryBuilder.php";
 
-    $tasks=fetchTask($pdo);
+    $quary=new QuaryBuilder($pdo=Connection::make());
+    $tasks=$quary->selectAll("tasks");
+    
 
     require "index.view.php";
 ?>
