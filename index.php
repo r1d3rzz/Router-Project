@@ -4,4 +4,10 @@
     } catch (PDOException $th) {
         echo $th->getMessage();
     }
+
+    $statement=$pdo->prepare("select * from tasks");
+    $statement->execute();
+    $tasks=$statement->fetchAll(PDO::FETCH_OBJ);
+
+    require "index.view.php";
 ?>
