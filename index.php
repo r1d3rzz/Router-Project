@@ -1,5 +1,9 @@
 <?php
     require "core/boostrap.php";
     
-    require "controllers/indexController.php";
+    $router=new Router();
+    
+    require "routes.php";
+
+    require $router->direct(trim($_SERVER['REQUEST_URI'],"/"));
 ?>
