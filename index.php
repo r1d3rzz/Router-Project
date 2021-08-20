@@ -1,7 +1,8 @@
 <?php
     require "function.php";
+    require "Connection.php";
     
-    $pdo=dbCollection();
+    $pdo=Connection::make();
 
     $tasks=fetchTask($pdo);
 
