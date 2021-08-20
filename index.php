@@ -3,5 +3,5 @@
     
     $tasks=$quary->selectAll("tasks");
     
-    require "index.view.php";
+    require "views/index.view.php";
 ?>
