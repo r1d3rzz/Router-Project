@@ -1,5 +1,5 @@
 <?php
-    require "boostrap.php";
+    require "core/boostrap.php";
     
     $tasks=$quary->selectAll("tasks");
     
