@@ -18,6 +18,7 @@
             {
                 return $this->routes[$uri];
             }
+            die("404 Page");
         }
     }
 ?>
