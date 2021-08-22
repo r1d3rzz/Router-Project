@@ -1,4 +1,4 @@
 <?php
-    $tasks=$quary->selectAll("tasks");
+    $users=$database->selectAll("users");
     require "views/index.view.php";
 ?>

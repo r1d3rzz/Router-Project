@@ -5,5 +5,5 @@
     $config=require "config.php";
     require "core/databases/Connection.php";
     require "core/databases/QuaryBuilder.php";
-    $quary=new QuaryBuilder($pdo=Connection::make($config['database']));
+    $database=new QuaryBuilder($pdo=Connection::make($config['database']));
 ?>
