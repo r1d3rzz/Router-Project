@@ -1,3 +1,7 @@
 <?php
-    var_dump($_POST['name']);
+    $database->insert([
+        "names"=>$_POST['name'],
+    ],"users");
+
+    header("location: /");
 ?>

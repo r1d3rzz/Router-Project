@@ -12,5 +12,20 @@
             $statement->execute();
             return $tasks=$statement->fetchAll(PDO::FETCH_OBJ);
         }
+        public function insert($dataArr,$table)
+        {
+            $getdataKeys=array_keys($dataArr);
+            $cols=implode(",",$getdataKeys);
+            $questionMarks="";
+            foreach($getdataKeys as $key)
+            {
+                $questionMarks.="?,";
+            }
+            $questionMarks=rtrim($questionMarks,",");
+            $sql="insert into $table ($cols) values ($questionMarks)";
+            $statement=$this->pdo->prepare($sql);
+            $getdataValues=array_values($dataArr);
+            $statement->execute($getdataValues);
+        }
     }
 ?>
