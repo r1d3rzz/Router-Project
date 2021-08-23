@@ -1,5 +1,5 @@
 <?php
-    $database->insert([
+    App::get("database")->insert([
         "names"=>$_POST['name'],
     ],"users");
 

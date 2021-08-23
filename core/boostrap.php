@@ -1,6 +1,7 @@
 <?php
     require "vendor/autoload.php";
     require "core/function.php";
-    $config=require "config.php";
-    $database=new QuaryBuilder($pdo=Connection::make($config['database']));
+    App::bind("config",require "config.php");
+    App::bind("database",new QuaryBuilder(
+        Connection::make(App::get("config")['database'])));
 ?>

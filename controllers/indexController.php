@@ -1,5 +1,5 @@
 <?php
-    $users=$database->selectAll("users");
+    $users=App::get("database")->selectAll("users");
     
     view("index",["users"=>$users]);
 ?>
