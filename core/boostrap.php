@@ -1,9 +1,6 @@
 <?php
-    require "core/Router.php";
-    require "core/Request.php";
+    require "vendor/autoload.php";
     require "core/function.php";
     $config=require "config.php";
-    require "core/databases/Connection.php";
-    require "core/databases/QuaryBuilder.php";
     $database=new QuaryBuilder($pdo=Connection::make($config['database']));
 ?>
