@@ -18,10 +18,10 @@
         public function createUsers()
         {
             App::get("database")->insert([
-                "names"=>$_POST['name'],
+                "names"=>request("name"),
             ],"users");
-        
-            header("location: /");
+            
+            redirect("/");
         }
     }
 ?>
