@@ -6,7 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'App' => $baseDir . '/core/App.php',
     'ComposerAutoloaderInitcf3e62956d1ed0f2dcec1dae19f37073' => $vendorDir . '/composer/autoload_real.php',
     'Composer\\Autoload\\ClassLoader' => $vendorDir . '/composer/ClassLoader.php',
     'Composer\\Autoload\\ComposerStaticInitcf3e62956d1ed0f2dcec1dae19f37073' => $vendorDir . '/composer/autoload_static.php',
@@ -16,4 +15,5 @@ return array(
     'QuaryBuilder' => $baseDir . '/core/databases/QuaryBuilder.php',
     'Request' => $baseDir . '/core/Request.php',
     'Router' => $baseDir . '/core/Router.php',
+    'core\\App' => $baseDir . '/core/App.php',
 );

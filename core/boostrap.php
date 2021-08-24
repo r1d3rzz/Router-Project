@@ -1,4 +1,5 @@
 <?php
+    use core\App;
     require "vendor/autoload.php";
     require "core/function.php";
     App::bind("config",require "config.php");

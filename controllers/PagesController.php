@@ -1,4 +1,5 @@
 <?php
+    use core\app;
     class PagesController
     {
         public function home()
