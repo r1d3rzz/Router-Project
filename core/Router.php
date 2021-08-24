@@ -25,11 +25,17 @@
         }
         public function direct($uri,$method)
         {
-            if(array_key_exists($uri,$this->routes[$method]))
+            if(!array_key_exists($uri,$this->routes[$method]))
             {
-                return $this->routes[$method][$uri];
+                die("404 Page");   
             }
-            die("404 Page");
+            $explodtion=explode("@",$this->routes[$method][$uri]);
+            $this->callAction($explodtion[0],$explodtion[1]);
+        }
+        public function callAction($class,$method)
+        {
+            $class=new $class;
+            $class->$method();
         }
     }
 ?>

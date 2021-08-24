@@ -13,6 +13,7 @@ class ComposerStaticInitcf3e62956d1ed0f2dcec1dae19f37073
         'Composer\\Autoload\\ComposerStaticInitcf3e62956d1ed0f2dcec1dae19f37073' => __DIR__ . '/..' . '/composer/autoload_static.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Connection' => __DIR__ . '/../..' . '/core/databases/Connection.php',
+        'PagesController' => __DIR__ . '/../..' . '/controllers/PagesController.php',
         'QuaryBuilder' => __DIR__ . '/../..' . '/core/databases/QuaryBuilder.php',
         'Request' => __DIR__ . '/../..' . '/core/Request.php',
         'Router' => __DIR__ . '/../..' . '/core/Router.php',
