@@ -1,6 +1,7 @@
 <?php
-    $router->get("","PagesController@home");
-    $router->get("about","PagesController@about");
-    $router->get("order","PagesController@order");
-    $router->post("names","PagesController@createUsers");
+    use controllers\PagesController;
+        $router->get("",[PagesController::class,"home"]);
+        $router->get("about",[PagesController::class,"about"]);
+        $router->get("order",[PagesController::class,"order"]);
+        $router->post("names",[PagesController::class,"createUsers"]);
 ?>

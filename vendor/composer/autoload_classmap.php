@@ -11,9 +11,9 @@ return array(
     'Composer\\Autoload\\ComposerStaticInitcf3e62956d1ed0f2dcec1dae19f37073' => $vendorDir . '/composer/autoload_static.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'Connection' => $baseDir . '/core/databases/Connection.php',
-    'PagesController' => $baseDir . '/controllers/PagesController.php',
     'QuaryBuilder' => $baseDir . '/core/databases/QuaryBuilder.php',
     'Request' => $baseDir . '/core/Request.php',
     'Router' => $baseDir . '/core/Router.php',
+    'controllers\\PagesController' => $baseDir . '/controllers/PagesController.php',
     'core\\App' => $baseDir . '/core/App.php',
 );

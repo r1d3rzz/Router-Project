@@ -29,7 +29,7 @@
             {
                 die("404 Page");   
             }
-            $explodtion=explode("@",$this->routes[$method][$uri]);
+            $explodtion=$this->routes[$method][$uri];
             $this->callAction($explodtion[0],$explodtion[1]);
         }
         public function callAction($class,$method)
